@@ -98,7 +98,7 @@ This block includes the Eventbrite registration widget if
 are not using Eventbrite, or leave it in, since it will not be
 displayed if the 'eventbrite' field in the header is not set.
 {% endcomment %}
-{% if eventbrite %}
+<!-- {% if eventbrite %}
 <strong>Some adblockers block the registration window. If you do not see the
   registration box below, please check your adblocker settings.</strong>
 
@@ -114,7 +114,7 @@ displayed if the 'eventbrite' field in the header is not set.
         iframeContainerId: 'eventbrite-widget-container',
     });
 </script>
-{% endif %}
+{% endif %} -->
 
 
 <h2 id="general">General Information</h2>
@@ -233,7 +233,7 @@ ACCESSIBILITY
 Modify the block below if there are any barriers to accessibility or
 special instructions.
 {% endcomment %}
-<p id="accessibility">
+<!-- <p id="accessibility">
   <strong>Accessibility:</strong>
 {% if online == "false" %}
   We are committed to making this workshop
@@ -256,7 +256,7 @@ special instructions.
   notify the instructors in advance of the workshop if you require any accommodations or if there is
   anything we can do to make this workshop more accessible to you.
 </p>
-{% endif %}
+{% endif %} -->
 
 <p id="files">
   <strong>Workshop files:</strong>
@@ -388,27 +388,43 @@ of code below the Schedule `<h2>` header below with
 
 {% if info.carpentry == "ds" %}
 <h2 id="syllabus">Syllabus</h2>
-{% remote_include {{lesson_meta}}/syllabus.md %}
+Introduction to version control with Git
+
+- Tracking changes: git add & git commit
+- Exploring history, checking out older versions
+- Ignoring things with .gitignore files
+- Github remotes
+
+Collaboration with Git and GitLab
+
+- Creating pull requests
+- Review process
+- Good practices for collaboration
+- Contributing to repositories with forks
 {% endif %}
 
 <h2 id="schedule">Schedule</h2>
 
-{% if info.carpentry == "swc" %}
-{% include swc/schedule.html %}
-{% elsif info.carpentry == "dc" %}
-{% include dc/schedule.html %}
-{% elsif info.carpentry == "lc" %}
-{% include lc/schedule.html %}
-{% elsif info.carpentry == "ds" %}
-{% remote_include {{lesson_meta}}/schedule.md %}
-{% elsif info.carpentry == "pilot" %}
-The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. If you would like to know the timing of these breaks in advance, please [contact the workshop organisers](#contact). For a list of lesson sections and estimated timings, [visit the lesson homepage]({{ site.lesson_site }}).
-{% comment %}
-Edit/replace the text above if you want to include a schedule table.
-See the contents of the _includes/custom-schedule.html file for an example of
-how one of these schedule tables is constructed.
-{% endcomment %}
-{% endif %}
+<div class="row">
+  <div class="col-md-6">
+    <table class="table table-striped">
+      <tr> <td>09:30</td>  <td>Welcome and icebreaker </td> </tr>
+      <tr> <td>09:45</td>  <td>Introduction to Git, setting up Git </td> </tr>
+      <tr> <td>10:45</td>  <td>Coffee break</td> </tr>
+      <tr> <td>11:00</td>  <td>Creating a repository, tracking changes. </td> </tr>
+      <tr> <td>11:50</td>  <td>Coffee break</td> </tr>
+      <tr> <td>12:00</td>  <td>Exploring history, ignoring things </td> </tr>
+      <tr> <td>12:45</td>  <td>Lunch</td> </tr>
+      <tr> <td>13:45</td>  <td>Remotes in GitLab</td> </tr>
+      <tr> <td>14:45</td>  <td>Coffe break</td> </tr>
+      <tr> <td>15:00</td>  <td>Collaboration with Git and GitLab</td> </tr>
+      <tr> <td>16:45</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>17:00</td>  <td>END</td> </tr>
+    </table>
+  </div>
+</div>
+
+<p><b>All times in the schedule are in the CET timezone.</b></p>
 
 <hr/>
 
@@ -427,7 +443,9 @@ please preview your site before committing, and make sure to run
 
 <h2 id="setup">Setup</h2>
 
-<p>
+Please refer to the "Setup" section of the registration page for setup instructions.
+
+<!-- <p>
   To participate in
   {% if info.carpentry == "swc" %}
   a Software Carpentry
@@ -477,7 +495,7 @@ during the workshop.
 Please check the "Setup" page of
 [the lesson site]({{ site.lesson_site }}) for instructions to follow
 to obtain the software and data you will need to follow the lesson.
-{% endif %}
+{% endif %} -->
 
 {% comment %}
 For online workshops, the section below provides:
