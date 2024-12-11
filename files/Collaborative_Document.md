@@ -3,12 +3,11 @@
 
 # Collaborative Document
 
-2024-12-10 ds-git-WUR
-
-Find this collaborate document: tinyurl.com/git-wur-2024
 
 
 ## Teaching material
+
+[Slides: Introduction to Git](https://esciencecenter-digital-skills.github.io/digital-skills-slides/modules/git-lesson/git-slides)
 
 [Version control with Git](https://swcarpentry.github.io/git-novice/), developed by [the Carpentries Community](https://carpentries.org/)
  
